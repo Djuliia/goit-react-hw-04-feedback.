@@ -9,7 +9,7 @@ import {
 import { toast } from 'react-hot-toast';
 
 export const SearchBar = ({ onSubmit }) => {
-  const [query, setQuery] = useState('');
+  // const [query, setQuery] = useState('');
 
   const handleSumbmit = e => {
     e.preventDefault();
@@ -18,7 +18,7 @@ export const SearchBar = ({ onSubmit }) => {
       return toast.error('Please fill in the field!');
     }
     onSubmit(search);
-    setQuery('');
+    // setQuery('');
   };
 
   return (
