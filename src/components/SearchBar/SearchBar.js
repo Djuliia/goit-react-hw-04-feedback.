@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   SearchForm,
   SearchFormBtn,
@@ -9,8 +8,6 @@ import {
 import { toast } from 'react-hot-toast';
 
 export const SearchBar = ({ onSubmit }) => {
-  // const [query, setQuery] = useState('');
-
   const handleSumbmit = e => {
     e.preventDefault();
     const search = e.currentTarget.elements.query.value.trim();
@@ -18,7 +15,6 @@ export const SearchBar = ({ onSubmit }) => {
       return toast.error('Please fill in the field!');
     }
     onSubmit(search);
-    // setQuery('');
   };
 
   return (
